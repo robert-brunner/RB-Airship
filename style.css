@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Smythe&display=swap');
+/*Created from scratch by Robert Brunner, Jr Full-Stack Developer, in Vanilla JS, HTML, CSS, Adobe After Effects, and Adobe Premiere in March 2023.*/
+
+*{
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-family: 'Smythe';
+    
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+}
+/*NameTag*/
+/* #HelloWorld{
+  position: absolute;
+  left: 42.5%;
+  top: -1.5%;
+  width: 15%;
+  height: auto;
+  z-index: 2;
+  text-align: center; 
+  overflow: hidden; 
+}
+
+#HelloWorld .textContainer{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: transparent; 
+  font-size: 3vh;
+}
+
+#Bob {
+  color: rgba(0,0,0,1);
+  font-size: 4vh;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+
+
+
+
+#nameTag {
+  background-color: transparent;
+  position: absolute;
+  left: 42.5%;
+  top: -1.4%;
+  width: 14%;
+  height: auto;
+  max-width: 16%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+}
+
+
+
+#nameTag .Bob{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: transparent; /* set the text color to transparent */
+  font-size: 3vh;
+  font-weight: bold;
+  background-clip: text; /* clip the background to the text area */
+  -webkit-background-clip: text; /* for Safari/Chrome */
+  color: rgba(0,0,0,1);
+}
+
+
+/* Ooooh Shiny!!!! */
+
+
+#nameTag:after {
+  content: "";
+  position: absolute;
+  top: -45%;
+  left: -60%;
+  width: 14%;
+  height: 137%;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+#nameTag:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+#nameTag:active:after {
+  opacity: 0;
+}
+
+
+/*BorderBox*/
+.airshipFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* set a higher z-index to ensure the frame is on top */
+}
+
+
+#FrameTop{
+  box-shadow:12px 13px 44px -16px #000000;
+}
+#FrameBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow:0px 0px 5px 1px #000000;
+}
+
+#RopeRight{
+position: fixed;
+transform:rotateZ(90deg);
+left:49%;
+}
+
+#RopeLeft{
+  position: fixed;
+  transform: rotateZ(90deg);
+  left:-50.5%
+}
+
+
+/*Toggle CSS*/
+#Toggle{
+  position:fixed;
+  left: 90%;
+  top: -0.5%;
+  width: 5%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+  background-color: transparent;
+  border:none;
+  transition: transform 2s ease-in-out;
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+  cursor: pointer;
+}
+
+#Toggle:hover{
+  transform: rotate(90deg);
+  transition:  2s ease-in-out;
+}
+
+
+/* The CSS begins to break down when the window is stretched beyond it's limit.  The following is my solution or punishment if you will for any user who tries to break the boundaries...An Easter Egg of sorts :) */
+.metalInnards{
+  position: relative;
+  /* width: 140vw; */
+  height: 120vh;
+
+}
+
+.ratsNest{
+  position: relative;
+  /* width: 140vw; */
+  height: 120vh;
+  filter: sepia(90%) saturate(300%) brightness(70%) hue-rotate(180deg)
+  
+}
+
+.mountains {
+  position: absolute; /* set a position to the parent element */
+  /* scale:125%; */
+  width: 100vw;
+}
+
+
+
+/*buttons!!!!!!!! */
+.frameClicker {
+  background-color: black;
+  border: black;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.08s ease-in-out;
+  width: 12vh;
+}
+
+.frameClicker:hover, .frameClicker:focus {
+  background-color: #000000;
+  outline: black;
+}
+
+.frameClicker:active {
+  background-color: #000000;
+  outline: black;
+  border-style: inset;
+}
+
+
+
+
+
+
+/*  Individual Buttons  */
+
+
+#Github{
+  position: fixed;
+  left: 30%;
+  bottom: 0.5%;
+  width: 10%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.GIT {
+  position: absolute;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+/*Needs work :D*/
+
+#Github:hover > .GIT{
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+
+}
+
+#LinkedIn{
+  position: fixed;
+  left:45%;
+  bottom: 0.5%;
+  width: 10%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.LI{
+  position: absolute;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+#LinkedIn:hover > .LI {
+  box-shadow: 0 0 15px #2cc2f0ad;
+  mix-blend-mode:hard-light;
+  opacity: 99%;
+  background-color: #ffffff62;
+}
+
+
+
+#Mail{
+  position: fixed;
+  left: 60%;
+  bottom: 0.5%;
+  width: 10%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Email{
+  position: absolute;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+/*Needs work :D*/
+#Mail:hover > .Email{
+  -webkit-filter: drop-shadow(12px 18px 7px rgba(0,0,0,0.5));
+  
+}
+
+
+
+
+#Skills {
+  position: absolute;
+  left: 25%;
+  top: 4%;
+  width: 10%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+#Skills .button-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0px 0px 0px #000;
+  background-color: rgba(0,0,0,0.7);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 3vh;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+#Skills .button-text:hover, #Skills:active .button-text {
+  color: #fff;
+  text-shadow: 0px 0px 4px #fff;
+  background-color: rgba(0,0,0,0.4);
+}
+
+#Skills:active .button-text {
+  background-image: linear-gradient(315deg, #f5f0e9 0%, #f7f7b1 74%);
+  cursor: pointer;
+}
+
+
+
+
+
+
+#Projects {
+  position: absolute;
+  left: 65%;
+  top: 4%;
+  width: 10%;
+  height: auto;
+  max-width: 8%;
+  z-index: 2;
+  text-align: center; /* center the text horizontally */
+  overflow: hidden; /* hide any overflow from the text */
+}
+
+
+
+#Projects .button-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: transparent; /* set the text color to transparent */
+  font-size: 3vh;
+  font-weight: bold;
+  background-clip: text; /* clip the background to the text area */
+  -webkit-background-clip: text; /* for Safari/Chrome */
+  color: rgba(0,0,0,1);
+}
+
+#Projects:active .button-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: transparent; /* set the text color to transparent */
+  font-size: 3vh;
+  font-weight: bold;
+  background-clip: text; /* clip the background to the text area */
+  -webkit-background-clip: text; /* for Safari/Chrome */
+  background-image: linear-gradient(315deg, #f5f0e9 0%, #f7f7b1 74%);
+}
+
+#Projects .button-text:hover, #Projects:active .button-text {
+  color: #fff;
+  text-shadow: 0px 0px 4px #fff;
+  background-color: rgba(0,0,0,0.4);
+}
+
+#Projects:active .button-text {
+  background-image: linear-gradient(315deg, #f5f0e9 0%, #f7f7b1 74%);
+  cursor: pointer;
+}
+
+
+/*
+
+
+AIRSHIPS!!!!!!!
+
+
+
+*/
+
+
+
+
+

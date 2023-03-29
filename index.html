@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airship
+    </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <body>
+
+
+      <button id="nameTag" class="HelloWorld">
+        <img src="Assets/Frame/Brass Nametag_00000.png" alt="">
+        <span class="Bob"> ROBERT BRUNNER</span>
+    </button>
+
+      
+    <div id="aspect-ratio"></div> <!--Helps me determine the size of the window for Easter Eggs-->
+
+    
+    <div class="airshipFrame">
+        <div class="wood">
+            <img src="Assets/Frame/Wood Long1.jpg" id="FrameTop" alt="">
+            <img src="Assets/Frame/Wood Long2.jpg" id="FrameBottom" alt="">
+        </div>
+        <div class="rope">
+            <img src="Assets/Frame/Rope1.png" id="RopeLeft" alt="">
+            <img src="Assets/Frame/Rope1.png" id="RopeRight" alt="">
+        </div>
+            <button id="Skills" class="frameClicker">
+            <img src="Assets/Frame/Rusted Steel.png" alt="Skills">
+            <span class="button-text">SKILLS</span>
+            </button>
+
+            <button id="Projects" class="frameClicker">
+            <img src="Assets/Frame/Rusted Steel.png" >
+            <span class="button-text">PROJECTS</span>
+            </button>
+        <div class="linksContainer">
+
+            <button id="Github" class="frameClicker" onclick="window.open(`https://github.com/robert-brunner`, '_blank')">
+                <img src="Assets/Frame/Brushed Brass.png" >
+                <img class="GIT" src="Assets/Frame/Icons/Github.png" >
+              </button>
+              
+
+            <button id="LinkedIn" class="frameClicker"onclick="window.open(`https://www.linkedin.com/in/robert-e-brunner/`, '_blank')">
+            <img src="Assets/Frame/Brushed Brass.png" >
+            <img class="LI" src="Assets/Frame/Icons/LinkedIn.png" >
+            </button>
+
+            <button id="Mail" class="frameClicker">
+            <img src="Assets/Frame/Brushed Brass.png" >
+            <img class="Email" src="Assets/Frame/Icons/Email.png" >
+            </button>
+
+            <button id="Toggle" class="Gear">
+            <img src="Assets/Frame/Scenery/Valve.png" >
+            </button>
+        </div>
+
+    </div>
+    <div class="mountains">
+        <video autoplay muted loop id="setExtension" src="Assets/Sky/Clouds45s.mp4"></video>
+        <!-- The CSS begins to break down when the window is stretched beyond it's limit.  The following is my solution or punishment if you will for any user who tries to break the boundaries...An Easter Egg of sorts :) -->
+
+        <div class="metalInnards">
+            <video autoplay muted loop id="overKill" src="Assets/Frame/Dials.mp4"></video>
+            <div class="ratsNest">
+                <img src="Assets/Frame/TangledWires_00000.png" alt="">
+                <img src="Assets/Frame/TangledWires_00000.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
