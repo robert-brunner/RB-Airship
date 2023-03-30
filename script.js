@@ -1,3 +1,67 @@
+window.addEventListener("resize", function() {
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    var aspectRatio = windowWidth / windowHeight;
+    
+    if (aspectRatio < 1.1 || aspectRatio < 1.61) {
+      // execute code if aspect ratio is less than 3:2 or greater than 16:9
+      console.log("Aspect ratio is less than 3:2 or greater than 16:9");
+      document.body.style.filter = "blur(5px)";
+    } else {
+      // execute code if aspect ratio is within limits
+      console.log("Aspect ratio is within limits");
+      document.body.style.filter = "none";
+    }
+  });
+
+
+  
+//something is amiss.... NVM.. for the moment..  The text box is only supposed to appear when the window is full screen. 
+  // window.addEventListener('resize', function() {
+  //   var text_box = document.querySelector('#text-box');
+  //   if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+  //     // Browser is in full screen mode
+  //     // do nothing, since #text-box:hover is already set to display:block by default
+  //     text_box.style.visibility = 'visible';
+  //   } else {
+  //     // Browser is not in full screen mode
+  //     // set #text-box:hover to visibility:hidden
+  //     text_box.style.visibility = 'hidden';
+  //   }
+  // });
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------unused-------------------------------
+
 // document.querySelector(".clouds").addEventListener("hover", ()=>{
 //     document.querySelector(".backdrop").classList.toggle("change");
 // })
@@ -103,21 +167,6 @@
     
 //   });
 
-window.addEventListener("resize", function() {
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
-    var aspectRatio = windowWidth / windowHeight;
-    
-    if (aspectRatio < 1.1 || aspectRatio < 1.61) {
-      // execute code if aspect ratio is less than 3:2 or greater than 16:9
-      console.log("Aspect ratio is less than 3:2 or greater than 16:9");
-      document.body.style.filter = "blur(5px)";
-    } else {
-      // execute code if aspect ratio is within limits
-      console.log("Aspect ratio is within limits");
-      document.body.style.filter = "none";
-    }
-  });
   
 
 // // Select the aspect-ratio div

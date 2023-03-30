@@ -154,8 +154,8 @@ left:49%;
 
 
 /*Toggle CSS*/
-#Toggle{
-  position:fixed;
+#Toggle {
+  position: fixed;
   left: 90%;
   top: -0.5%;
   width: 5%;
@@ -165,16 +165,47 @@ left:49%;
   text-align: center;
   overflow: hidden;
   background-color: transparent;
-  border:none;
-  transition: transform 2s ease-in-out;
+  border: none;
   -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
   cursor: pointer;
 }
 
-#Toggle:hover{
+#Toggle:hover {
   transform: rotate(90deg);
-  transition:  2s ease-in-out;
+  transition: 2s ease-in-out;
 }
+
+#text-box {
+  position: fixed;
+  left: 89.5vw;
+  top: 12%;
+  max-width: 6%;
+  opacity: 85%;
+  color:#492106;
+  text-align: center;
+  text-size-adjust: auto;
+  height: auto;
+  max-height: 50%;
+  z-index: 1;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3), 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+}
+
+
+#Toggle:hover + #text-box {
+  display: block;
+}
+
+#text-box:hover {
+  display: block;
+}
+
+
+
 
 
 /* The CSS begins to break down when the window is stretched beyond it's limit.  The following is my solution or punishment if you will for any user who tries to break the boundaries...An Easter Egg of sorts :) */
@@ -428,6 +459,8 @@ AIRSHIPS!!!!!!!
 
 
 */
+
+
 
 
 
