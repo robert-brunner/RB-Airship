@@ -19,8 +19,10 @@ window.addEventListener("resize", function() {
   const skillsButton = document.querySelector("#Skills");
   const zepplinSkills = document.querySelector(".AirshipSkills")
   const reactoon = document.querySelector(".Reactoon");
+  const jsoon = document.querySelector(".JSoon");
   
   reactoon.style.animation = "moveReactoon 4s infinite"; // set animation
+  jsoon.style.animation = "moveJSoon 4s infinite"; // set animation
   
   skillsButton.addEventListener("click", () => {
     if (buttonState === 0) {

@@ -464,9 +464,9 @@ AIRSHIPS!!!!!!!
   width: 0%;
   height: 0%;
   overflow: hidden;
-  visibility: hidden;
-  opacity: 0; /* initial opacity value */
-  transition: opacity 1s; /* transition property */
+  /* visibility: hidden;
+  opacity: 0;   I NEED TO WORK ON LOOOONS! */
+  transition: opacity 1s; 
   z-index: 0;
 }
 
@@ -476,6 +476,17 @@ AIRSHIPS!!!!!!!
 }
 
 
+
+
+.Reactoon {
+  position: fixed;
+  width: 40%;
+  top: 80%;
+  left: -5%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+  
+  
+}
 
 @keyframes moveReactoon {
   0% {
@@ -490,14 +501,25 @@ AIRSHIPS!!!!!!!
 
 }
 
-.Reactoon {
+.JSoon{
   position: fixed;
-  width: 40%;
-  top: 80%;
-  left: -5%;
+  left:15%;
+  width: 25%;
+  top: 20%;
   animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
 
-  
+@keyframes moveJSoon {
+  0% {
+    top: 30%;
+  }
+  50% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+
 }
 
 
@@ -505,44 +527,37 @@ AIRSHIPS!!!!!!!
 
 
 
-
-
-/* .JSoon{
+/* .HTMLoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.HTMLoon{
+/* .CSSoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.CSSoon{
+/* .AEPoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.AEPoon{
+/* .cSHRPoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.cSHRPoon{
+/* .SQLoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.SQLoon{
+/* .NodeJSoon{
   position: fixed;
   left:6%;
-}
+} */
 
-.NodeJSoon{
-  position: fixed;
-  left:6%;
-}
-
-.Larry{
+/* .Larry{
   position: fixed;
   left:6%;
 } */
