@@ -14,7 +14,31 @@ window.addEventListener("resize", function() {
     }
   });
 
+  let buttonState = 0;
+  const skillsButton = document.querySelector("#Skills");
+  const zepplinSkills = document.querySelector(".AirshipSkills")
+  const reactoon = document.querySelector(".Reactoon");
 
+  reactoon.style.animation = "moveReactoon 4s infinite"; // set animation
+  
+  skillsButton.addEventListener("click", () => {
+    if (buttonState === 0) {
+      // Change state to 1 and show the skills
+      buttonState = 1;
+      zepplinSkills.classList.add("show");
+  
+      // Set a timeout to toggle the state back to 0 after 2 seconds
+      setTimeout(() => {
+        buttonState = 0;
+        zepplinSkills.classList.remove("show");
+      }, 6000);
+    } else {
+      // Toggle state back to 0 and hide the skills
+      buttonState = 0;
+      zepplinSkills.classList.remove("show");
+    }
+  });
+  
   
 //something is amiss.... NVM.. for the moment..  The text box is only supposed to appear when the window is full screen. 
   // window.addEventListener('resize', function() {

@@ -60,7 +60,7 @@ html, body {
   width: 14%;
   height: auto;
   max-width: 16%;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   overflow: hidden;
   border: none;
@@ -126,7 +126,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* set a higher z-index to ensure the frame is on top */
+  z-index: 2; /* set a higher z-index to ensure the frame is on top */
 }
 
 
@@ -213,6 +213,7 @@ left:49%;
   position: relative;
   /* width: 140vw; */
   height: 120vh;
+  z-index: 1;
 
 }
 
@@ -458,17 +459,56 @@ AIRSHIPS!!!!!!!
 
 */
 
-.AirshipSkills{
-  min-width: 0%;
-  min-height: 0%;
+.AirshipSkills {
+  position: relative;
+  width: 0%;
+  height: 0%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0; /* initial opacity value */
+  transition: opacity 1s; /* transition property */
+  z-index: 0;
 }
 
-.Reactoon{
-  position: fixed;
-  left: -5%;
-  width: 40%;
-  top: 30%;
+.show {
+  visibility: visible;
+  opacity: 1;
 }
+
+.hide{
+  opacity: 0;
+  transition: opacity 1.5s; /*For some reason this breaks.  I want it to fade out softly like it faded in. :'(*/
+}
+
+@keyframes moveReactoon {
+  0% {
+    top: 30%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 30%;
+  }
+
+}
+
+.Reactoon {
+  position: fixed;
+  width: 40%;
+  top: 80%;
+  left: -5%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+
+  
+}
+
+
+
+
+
+
+
 
 /* .JSoon{
   position: fixed;
