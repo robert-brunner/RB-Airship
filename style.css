@@ -475,10 +475,7 @@ AIRSHIPS!!!!!!!
   opacity: 1;
 }
 
-.hide{
-  opacity: 0;
-  transition: opacity 1.5s; /*For some reason this breaks.  I want it to fade out softly like it faded in. :'(*/
-}
+
 
 @keyframes moveReactoon {
   0% {

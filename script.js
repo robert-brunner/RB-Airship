@@ -15,10 +15,11 @@ window.addEventListener("resize", function() {
   });
 
   let buttonState = 0;
+  let timer = null; // new variable to keep track of timeout
   const skillsButton = document.querySelector("#Skills");
   const zepplinSkills = document.querySelector(".AirshipSkills")
   const reactoon = document.querySelector(".Reactoon");
-
+  
   reactoon.style.animation = "moveReactoon 4s infinite"; // set animation
   
   skillsButton.addEventListener("click", () => {
@@ -28,7 +29,7 @@ window.addEventListener("resize", function() {
       zepplinSkills.classList.add("show");
   
       // Set a timeout to toggle the state back to 0 after 2 seconds
-      setTimeout(() => {
+      timer = setTimeout(() => {
         buttonState = 0;
         zepplinSkills.classList.remove("show");
       }, 6000);
@@ -36,10 +37,9 @@ window.addEventListener("resize", function() {
       // Toggle state back to 0 and hide the skills
       buttonState = 0;
       zepplinSkills.classList.remove("show");
+      clearTimeout(timer); // cancel the timeout
     }
   });
-  
-  
 //something is amiss.... NVM.. for the moment..  The text box is only supposed to appear when the window is full screen. 
   // window.addEventListener('resize', function() {
   //   var text_box = document.querySelector('#text-box');
