@@ -23,12 +23,16 @@ window.addEventListener("resize", function() {
   const htmloon = document.querySelector(".HTMLoon");
   const cssoon = document.querySelector(".CSSoon");
   const cshrpoon = document.querySelector(".cSHRPoon");
+  const sqloon = document.querySelector(".SQLoon");
+  const aepoon = document.querySelector(".AEPoon");
   
   reactoon.style.animation = "moveReactoon 4s infinite"; // React Balloon
   jsoon.style.animation = "moveJSoon 4s infinite"; // JavaScript Balloon
   htmloon.style.animation = "moveHTMLoon 6s infinite"; // HTML Balloon
   cssoon.style.animation = "moveCSSoon 9s infinite"; // CSS Balloon... if only the others knew all the effort this poor little balloon is doing for them...
-  cshrpoon.style.animation = "movecSHRPoon 20s infinite";
+  cshrpoon.style.animation = "movecSHRPoon 25s infinite";
+  sqloon.style.animation = "moveSQLoon 15s infinite";
+  aepoon.style.animation = "moveAEPoon 5s infinite";
   
   skillsButton.addEventListener("click", () => {
     if (buttonState === 0) {
