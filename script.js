@@ -20,9 +20,15 @@ window.addEventListener("resize", function() {
   const zepplinSkills = document.querySelector(".AirshipSkills")
   const reactoon = document.querySelector(".Reactoon");
   const jsoon = document.querySelector(".JSoon");
+  const htmloon = document.querySelector(".HTMLoon");
+  const cssoon = document.querySelector(".CSSoon");
+  const cshrpoon = document.querySelector(".cSHRPoon");
   
-  reactoon.style.animation = "moveReactoon 4s infinite"; // set animation
-  jsoon.style.animation = "moveJSoon 4s infinite"; // set animation
+  reactoon.style.animation = "moveReactoon 4s infinite"; // React Balloon
+  jsoon.style.animation = "moveJSoon 4s infinite"; // JavaScript Balloon
+  htmloon.style.animation = "moveHTMLoon 6s infinite"; // HTML Balloon
+  cssoon.style.animation = "moveCSSoon 9s infinite"; // CSS Balloon... if only the others knew all the effort this poor little balloon is doing for them...
+  cshrpoon.style.animation = "movecSHRPoon 20s infinite";
   
   skillsButton.addEventListener("click", () => {
     if (buttonState === 0) {
@@ -30,11 +36,11 @@ window.addEventListener("resize", function() {
       buttonState = 1;
       zepplinSkills.classList.add("show");
   
-      // Set a timeout to toggle the state back to 0 after 2 seconds
-      timer = setTimeout(() => {
-        buttonState = 0;
-        zepplinSkills.classList.remove("show");
-      }, 6000);
+      // // Set a timeout to toggle the state back to 0 after 2 seconds
+      // timer = setTimeout(() => {
+      //   buttonState = 0;
+      //   zepplinSkills.classList.remove("show");
+      // }, 20000);
     } else {
       // Toggle state back to 0 and hide the skills
       buttonState = 0;
@@ -42,6 +48,26 @@ window.addEventListener("resize", function() {
       clearTimeout(timer); // cancel the timeout
     }
   });
+
+
+
+  //I AM GOING TO DO THIS.. IT WOULD BE AMAZING!!!!!   The balloons have at least one other set of animations to go thru. Right now they are just bobbing.  THere can also be a mode where they fly across the screen in a train fashion.. :D hahahahah or perhaps a bird or aliens chase them :D  ^(¤.¤)^Hoot! Hoot!^(¤.¤)^ ... I Need to touch grass at some point 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //something is amiss.... NVM.. for the moment..  The text box is only supposed to appear when the window is full screen. 
   // window.addEventListener('resize', function() {
   //   var text_box = document.querySelector('#text-box');
