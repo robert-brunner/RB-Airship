@@ -60,7 +60,7 @@ html, body {
   width: 14%;
   height: auto;
   max-width: 16%;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   overflow: hidden;
   border: none;
@@ -126,7 +126,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* set a higher z-index to ensure the frame is on top */
+  z-index: 2; /* set a higher z-index to ensure the frame is on top */
 }
 
 
@@ -154,8 +154,8 @@ left:49%;
 
 
 /*Toggle CSS*/
-#Toggle{
-  position:fixed;
+#Toggle {
+  position: fixed;
   left: 90%;
   top: -0.5%;
   width: 5%;
@@ -165,16 +165,47 @@ left:49%;
   text-align: center;
   overflow: hidden;
   background-color: transparent;
-  border:none;
-  transition: transform 2s ease-in-out;
+  border: none;
   -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
   cursor: pointer;
 }
 
-#Toggle:hover{
+#Toggle:hover {
   transform: rotate(90deg);
-  transition:  2s ease-in-out;
+  transition: 2s ease-in-out;
 }
+
+#text-box {
+  position: fixed;
+  left: 89.5vw;
+  top: 12%;
+  max-width: 6%;
+  opacity: 85%;
+  color:#492106;
+  text-align: center;
+  text-size-adjust: auto;
+  height: auto;
+  max-height: 50%;
+  z-index: 1;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3), 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: none;
+}
+
+
+#Toggle:hover + #text-box {
+  display: block;
+}
+
+#text-box:hover {
+  display: block;
+}
+
+
+
 
 
 /* The CSS begins to break down when the window is stretched beyond it's limit.  The following is my solution or punishment if you will for any user who tries to break the boundaries...An Easter Egg of sorts :) */
@@ -182,6 +213,7 @@ left:49%;
   position: relative;
   /* width: 140vw; */
   height: 120vh;
+  z-index: 1;
 
 }
 
@@ -422,12 +454,204 @@ left:49%;
 
 /*
 
-
 AIRSHIPS!!!!!!!
 
 
-
 */
+
+.AirshipSkills {
+  position: relative;
+  width: 0%;
+  height: 0%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;   
+  transition: opacity 1s; 
+  z-index: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+.Reactoon {
+  position: fixed;
+  width: 40%;
+  top: 80%;
+  left: -5%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+  
+  
+}
+
+@keyframes moveReactoon {
+  0% {
+    top: 30%;
+  }
+  50% {
+    top: 35%;
+  }
+  100% {
+    top: 30%;
+  }
+
+}
+
+.JSoon{
+  position: fixed;
+  left:15%;
+  width: 25%;
+  top: 20%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+@keyframes moveJSoon {
+  0% {
+    top: 30%;
+  }
+  50% {
+    top: 25%;
+  }
+  100% {
+    top: 30%;
+  }
+
+}
+
+
+
+.HTMLoon{
+  position: fixed;
+  left:25%;
+  width: 25%;
+  top: 57%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+
+@keyframes moveHTMLoon {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 42%;
+  }
+  100% {
+    top: 50%;
+  }
+
+}
+
+
+
+
+.CSSoon{
+  position: fixed;
+  left:9%;
+  width: 35%;
+  top: 57%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+@keyframes moveCSSoon {
+  0% {
+    top: 75%;
+  }
+  50% {
+    top: 54%;
+    animation-timing-function: steps(.01, end);
+    /* set the balloon to hold for .01 second */
+  }
+  100% {
+    top: 75%;
+  }
+}
+
+.cSHRPoon{
+  position: fixed;
+  left:6%;
+  width: 45%;
+  left: 70%;
+  top: -40%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+@keyframes movecSHRPoon{
+  0% {
+    top: -40%;
+    left: 70%;
+  }
+  50% {
+    top: 5%;
+    
+  }
+  100% {
+    top: -40%;
+    left:10%;
+  }
+
+}
+.SQLoon{
+  position: fixed;
+  left: 70%;
+  width: 45%;
+  top: 90%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+
+@keyframes moveSQLoon{
+  0% {
+    top: 70%;
+  }
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 70%;
+    
+  }
+}
+
+
+.AEPoon{
+  position: fixed;
+  width: 25%;
+  left: 65%;
+  top: 80%;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
+}
+
+@keyframes moveAEPoon{
+  0% {
+    top: 55%;
+    left: 50%;
+  }
+  50% {
+    top: 60%;
+  }
+  100% {
+    top: 55%;
+    left: 50%;
+    
+  }
+}
+
+
+/* .NodeJSoon{
+  position: fixed;
+  left:6%;
+} */
+
+/* .Larry{
+  position: fixed;
+  left:6%;
+} */
+
 
 
 
