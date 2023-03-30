@@ -458,11 +458,16 @@ AIRSHIPS!!!!!!!
 
 */
 
-
+.AirshipSkills{
+  min-width: 0%;
+  min-height: 0%;
+}
 
 .Reactoon{
   position: fixed;
-  left: -13%;
+  left: -5%;
+  width: 40%;
+  top: 30%;
 }
 
 /* .JSoon{
