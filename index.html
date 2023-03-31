@@ -21,7 +21,7 @@
           </div>
 
 
-      <button id="nameTag" class="HelloWorld">
+      <button id="nameTag" class="HelloWorld" onmouseover="playSound()">
         <img src="Assets/Frame/Brass Nametag_00000.png" alt="">
         <span class="Bob"> ROBERT BRUNNER</span>
     </button>
@@ -62,12 +62,13 @@
             <img class="LI" src="Assets/Frame/Icons/LinkedIn.png" >
             </button>
 
-            <button id="Mail" class="frameClicker">
-            <img src="Assets/Frame/Brushed Brass.png" >
-            <img class="Email" src="Assets/Frame/Icons/Email.png" >
-            </button>
+            <button id="Mail" class="frameClicker" data-email="brunner.robert.work@gmail.com" onclick="copyEmailAndOpen()">
+                <img src="Assets/Frame/Brushed Brass.png">
+                <img class="Email" src="Assets/Frame/Icons/Email.png">
+              </button>
+              
 
-            <button id="Toggle" class="Gear">
+            <button id="Toggle" class="Gear" onclick="valvePressure()">
                 <img src="Assets/Frame/Scenery/Valve.png">
               </button>
               <div id="text-box" class="hidden">

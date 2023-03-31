@@ -54,21 +54,24 @@ window.addEventListener("resize", function() {
   });
 
   // Get all the buttons
-var buttons = document.querySelectorAll('button');
+  var buttons = document.querySelectorAll('button');
 
-// Add click event listener to each button
-buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    // Play audio file
-    var audio = document.querySelector('.Sounds audio');
-    audio.play();
+  // Add click event listener to each button
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Check if the button has the class name "Tulip"
+      if (button.classList.contains('frameClicker')) {
+        // Play audio file
+        var audio = document.querySelector('.Sounds audio');
+        audio.play();
+      }
+    });
   });
-});
 
 
 window.addEventListener('load', function() {
   var ambientSound = document.getElementById('ambientSound');
-  ambientSound.volume = 2; // set the volume to 50%
+  ambientSound.volume = 0.09; // set the volume to 50%
   ambientSound.play();
 });
 
@@ -77,9 +80,41 @@ window.addEventListener('load', function() {
 
 
 
+  function copyEmailAndOpen() {
+    var email = document.querySelector('#Mail').getAttribute('data-email');
+    var tempInput = document.createElement('input');
+    tempInput.value = email;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert("Email copied to clipboard: " + email);
+    window.open('mailto:' + email);
+  }
+  
+  var lastPlayedTime = 0;
+  
+  function playSound() {
+    var currentTime = new Date().getTime();
+    if (currentTime - lastPlayedTime > 2000) { // Check if 2 second have passed since last play
+      var sound = new Audio('Assets/Sounds/Ting.ogg');
+      sound.play();
+      sound.volume = 0.05
+      lastPlayedTime = currentTime; // Update last played time
+    }
+  }
 
-
-
+  var lastPlayedTime = 0;
+  
+  function valvePressure() {
+    var currentTime = new Date().getTime();
+    if (currentTime - lastPlayedTime > 2000) { // Check if 2 second have passed since last play
+      var sound = new Audio('Assets/Sounds/ValvePressureRelease.ogg');
+      sound.play();
+      sound.volume = 0.5
+      lastPlayedTime = currentTime; // Update last played time
+    }
+  }
 
 
 
