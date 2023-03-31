@@ -654,6 +654,17 @@ AIRSHIPS!!!!!!!
 
 
 
+#Sextant{
+  position: fixed;
+  left: 3%;
+  bottom:-2%;
+  width:12%;
+}
 
-
+#Compass{
+  position: fixed;
+  right:3%;
+  bottom:-11%;
+  width:12%;
+}
 
