@@ -511,13 +511,13 @@ AIRSHIPS!!!!!!!
 
 @keyframes moveJSoon {
   0% {
-    top: 30%;
+    top: 17%;
   }
   50% {
-    top: 25%;
+    top: 13%;
   }
   100% {
-    top: 30%;
+    top: 17%;
   }
 
 }
@@ -559,15 +559,15 @@ AIRSHIPS!!!!!!!
 
 @keyframes moveCSSoon {
   0% {
-    top: 75%;
+    top: 55%;
   }
   50% {
-    top: 54%;
+    top: 48%;
     animation-timing-function: steps(.01, end);
     /* set the balloon to hold for .01 second */
   }
   100% {
-    top: 75%;
+    top: 55%;
   }
 }
 
@@ -591,7 +591,7 @@ AIRSHIPS!!!!!!!
   }
   100% {
     top: -40%;
-    left:10%;
+    left:15%;
   }
 
 }
@@ -599,20 +599,20 @@ AIRSHIPS!!!!!!!
   position: fixed;
   left: 70%;
   width: 45%;
-  top: 90%;
+  top: 55%;
   animation-timing-function: cubic-bezier(0.25, 0.1, 0.76, 0.99) !important;
 }
 
 
 @keyframes moveSQLoon{
   0% {
-    top: 70%;
+    top: 50%;
   }
   50% {
-    top: 45%;
+    top: 38%;
   }
   100% {
-    top: 70%;
+    top: 50%;
     
   }
 }
