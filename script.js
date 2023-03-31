@@ -69,11 +69,18 @@ window.addEventListener("resize", function() {
   });
 
 
-window.addEventListener('load', function() {
-  var ambientSound = document.getElementById('ambientSound');
-  ambientSound.volume = 0.09; // set the volume to 50%
-  ambientSound.play();
-});
+  document.querySelectorAll('button').forEach(function(button) {
+    button.addEventListener('click', function() {
+      var ambientSound = document.getElementById('ambientSound');
+      ambientSound.volume = 0.09; // set the volume to 50%
+      ambientSound.play();
+    });
+    
+    button.addEventListener('mouseover', function() {
+      // do something when button is hovered
+    });
+  });
+  
 
   //I AM GOING TO DO THIS.. IT WOULD BE AMAZING!!!!!   The balloons have at least one other set of animations to go thru. Right now they are just bobbing.  THere can also be a mode where they fly across the screen in a train fashion.. :D hahahahah or perhaps a bird or aliens chase them :D  ^(¤.¤)^Hoot! Hoot!^(¤.¤)^ ... I Need to touch grass at some point 
 
