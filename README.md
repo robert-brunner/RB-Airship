@@ -1,6 +1,6 @@
 # RB-Airship
 
-https://robert-brunner.github.io/RB-Airship/ (site)
+https://robert-brunner.github.io/RB-Airship/
 
 CSS heavy profile page
 Greetings!  I wanted a way to display my love of CSS; After Effects, and Premier whilst still coding something unique to me.   
