@@ -100,15 +100,26 @@ window.addEventListener("resize", function() {
   
   var lastPlayedTime = 0;
   
-  function playSound() {
-    var currentTime = new Date().getTime();
-    if (currentTime - lastPlayedTime > 2000) { // Check if 2 second have passed since last play
-      var sound = new Audio('Assets/Sounds/Ting.ogg');
-      sound.play();
-      sound.volume = 0.05
-      lastPlayedTime = currentTime; // Update last played time
-    }
-  }
+// Initialize an array to keep track of playing sounds
+var playingSounds = [];
+
+function playSound() {
+  var currentTime = new Date().getTime();
+  
+    var sound = new Audio('Assets/Sounds/Ting.ogg');
+    sound.volume = 0.05;
+    sound.play();
+    playingSounds.push(sound); // Add the sound to the playing sounds array
+
+    // Remove the sound from the playing sounds array when it finishes playing
+    sound.addEventListener('ended', function() {
+      playingSounds.splice(playingSounds.indexOf(sound), 1);
+    });
+
+    lastPlayedTime = currentTime; // Update last played time
+  
+}
+
 
   var lastPlayedTime = 0;
   
@@ -123,7 +134,7 @@ window.addEventListener("resize", function() {
   }
 
 
-
+//some assets take longer to load than others.
   window.addEventListener('load', function() {
     var loader = document.getElementById('loader');
     loader.style.display = 'none';
