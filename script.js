@@ -92,7 +92,7 @@ function toggleAmbientSound() {
     ambientSound.pause();
   }
 }
-
+//GOING IN CIRCLES  UGH
 function toggleGramophone() {
   if (!isState3Activated) {
     gramOn.style.display = 'none';
