@@ -20,10 +20,21 @@
         <div class="Sounds">
             <audio src="Assets/Sounds/PressurePlate.ogg"></audio>
         </div>
+        <img class="circle" src="Assets/Frame/Rusted Steel.png"></img>
 
-        <div class="backgroundAmbience">
-            <audio id="ambientSound" src="Assets/Sounds/AmbientWindClassical.ogg" loop></audio>
+
+        
+        
+        <div class="NoiseContainer">
+            <button class="backgroundNoiseToggle">
+              <img id="gramOn" src="Assets/Frame/Scenery/Grammaphone on.png" onclick="toggleGramophone()" style="display:none">
+              <img id="gramOff" src="Assets/Frame/Scenery/Grammaphone off.png" onclick="toggleGramophone()">
+            </button>
+            <div class="backgroundAmbience">
+              <audio id="ambientSound" src="Assets/Sounds/AmbientWindClassical.ogg" loop></audio>
+            </div>
           </div>
+          
 
 
       <button id="nameTag" class="HelloWorld" onmouseover="playSound()">

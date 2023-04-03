@@ -14,6 +14,8 @@ window.addEventListener("resize", function() {
     }
   });
 
+
+  //Airship Animation
   let buttonState = 0;
   let timer = null; // new variable to keep track of timeout
   const skillsButton = document.querySelector("#Skills");
@@ -69,17 +71,86 @@ window.addEventListener("resize", function() {
   });
 
 
-  document.querySelectorAll('button').forEach(function(button) {
-    button.addEventListener('click', function() {
-      var ambientSound = document.getElementById('ambientSound');
-      ambientSound.volume = 0.09; // set the volume to 50%
+
+//Sound control via Gramophone
+var frameClickers = document.querySelectorAll('.frameClicker');
+var gramOn = document.getElementById('gramOn');
+var gramOff = document.getElementById('gramOff');
+var ambientSound = document.getElementById('ambientSound');
+ambientSound.volume = 0.1;
+ambientSound.value = 0;
+var isAmbientSoundEnabled = false; // new variable to keep track of AmbientSound state
+var isState3Activated = false; // new variable to keep track of state 3 activation
+
+function toggleAmbientSound() {
+  if (!isState3Activated) {
+    ambientSound.value = 3;
+    ambientSound.play();
+    isState3Activated = true;
+  } else if (ambientSound.value === 4 && gramOff.style.display === 'none') {
+    ambientSound.value = 3;
+    ambientSound.pause();
+  }
+}
+
+function toggleGramophone() {
+  if (!isState3Activated) {
+    gramOn.style.display = 'none';
+    gramOff.style.display = 'block';
+    ambientSound.value = 3;
+    ambientSound.pause();
+    frameClickers.forEach(function(button) {
+      button.removeEventListener('click', toggleAmbientSound);
+    });
+    isState3Activated = true;
+  } else if (ambientSound.value === 3 && this === gramOn) {
+    if (!isAmbientSoundEnabled) { // check if AmbientSound is enabled for the first time
+      gramOn.style.display = 'block';
+      gramOff.style.display = 'none';
+      isAmbientSoundEnabled = true;
+    } else {
+      gramOn.style.display = 'block';
+      gramOff.style.display = 'none';
+      ambientSound.value = 4;
+      frameClickers.forEach(function(button) {
+        button.addEventListener('click', toggleAmbientSound);
+      });
+    }
+  }
+}
+
+frameClickers.forEach(function(button) {
+  button.addEventListener('click', toggleAmbientSound);
+});
+
+gramOn.addEventListener('click', toggleGramophone);
+gramOff.addEventListener('click', toggleGramophone);
+
+document.querySelectorAll('.backgroundNoiseToggle').forEach(function(backgroundNoiseToggle) {
+  backgroundNoiseToggle.addEventListener('click', function() {
+    // update gramophone image display
+    var gramOn = document.getElementById('gramOn');
+    var gramOff = document.getElementById('gramOff');
+    if (gramOff.style.display === 'none') {
+      gramOff.style.display = 'block';
+      gramOn.style.display = 'none';
+      ambientSound.pause();
+    } else {
+      gramOff.style.display = 'none';
+      gramOn.style.display = 'block';
+      ambientSound.volume = 0.1;
       ambientSound.play();
-    });
-    
-    button.addEventListener('mouseover', function() {
-      // do something when button is hovered
-    });
+    }
   });
+});
+
+
+
+
+
+
+
+
 
   //I AM GOING TO DO THIS.. IT WOULD BE AMAZING!!!!!   The balloons have at least one other set of animations to go thru. Right now they are just bobbing.  THere can also be a mode where they fly across the screen in a train fashion.. :D hahahahah or perhaps a bird or aliens chase them :D  ^(¤.¤)^Hoot! Hoot!^(¤.¤)^ ... I Need to touch grass at some point 
 
@@ -105,7 +176,7 @@ var playingSounds = [];
 
 function playSound() {
   var currentTime = new Date().getTime();
-  
+  if (currentTime - lastPlayedTime > 1500) {
     var sound = new Audio('Assets/Sounds/Ting.ogg');
     sound.volume = 0.05;
     sound.play();
@@ -117,7 +188,7 @@ function playSound() {
     });
 
     lastPlayedTime = currentTime; // Update last played time
-  
+  }
 }
 
 
