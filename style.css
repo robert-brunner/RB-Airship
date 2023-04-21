@@ -757,8 +757,24 @@ AIRSHIPS!!!!!!!
   right:5% !important;
  }
  
+/* Password field */
+#password-field{
+  font-size:19px;
+  line-height:20.7px;
+  color:#fc7c0c;
+  word-spacing:1.7px;
+  letter-spacing:2.2px;
+ }
+ 
+
  #hole{
  position:relative;
  left:-4px;
  transform: scale(0.5);
+ }
+
+ /* Paragraph */
+#password-text p{
+  font-size:15px;
+  font-style:normal;
  }
