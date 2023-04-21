@@ -233,6 +233,27 @@ function playSound() {
 
   
 
+//Eyes only
+
+function showPasswordInput() {
+    var input = document.getElementById("password-input");
+    input.style.display = "block";
+    input.style.marginTop = "20px";
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            checkPassword();
+        }
+    });
+}
+
+function checkPassword() {
+    var password = document.getElementById("password-field").value;
+    if (password === "hired") {
+        document.getElementById("password-text").style.display = "block";
+    }
+}
+
 
 
 

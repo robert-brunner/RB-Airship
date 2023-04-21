@@ -35,7 +35,60 @@
             </div>
           </div>
           
-
+          <div class="PassWoRd">
+            <title>Click and Password Example</title>
+            <style>
+              /* Style for the hover image */
+              .hover-image {
+                width: 100px;
+                height: 100px;
+                font-size: 80px;
+                line-height: 1;
+                text-align: center;
+                cursor: pointer;
+              }
+          
+              /* Style for the text box */
+              .password-input {
+                display: none;
+                
+              }
+          
+              /* Style for the text that appears after password is entered */
+              .password-text {
+                display: none;
+                margin-top: 10px;
+              }
+          
+              /* Style for the card container */
+              .card {
+                width: 200px;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 0 auto;
+                margin-top: 50px;
+              }
+            </style>
+          
+            <div class="card">
+              <div class="hover-image" id="hole" onclick="showPasswordInput()">
+                🕳️
+              </div>
+          
+              <div class="password-input" id="password-input">
+                <input type="password" id="password-field" placeholder="🥕CARROT?🥕">
+              </div>
+              
+          
+              <div class="password-text" id="password-text">
+                <p class="cheers">🥳Great! I'll Start monday!🚩🐇</p>
+              </div>
+            </div>
+          
+            <script src="password.js"></script>
+          </div>
+          
+        
 
       <button id="nameTag" class="HelloWorld" onmouseover="playSound()">
         <img src="Assets/Frame/Brass Nametag_00000.png" alt="">
@@ -145,8 +198,8 @@
 </div>
 
 
-
 <!--AirSHIPS!!!    -->
+
 
 
 
